@@ -177,7 +177,7 @@ Game.Launch=function()
 		Game.beta=0;
 		l('versionNumber').innerHTML='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
 		//l('links').innerHTML=(Game.beta?'<a href="../" target="blank">Live version</a> | ':'<a href="beta" target="blank">Try the beta!</a> | ')+'<a href="http://orteil.dashnet.org/experiments/cookie/" target="blank">Cookie Clicker Classic</a>';
-		l('links').innerHTML='<a href="http://orteil.dashnet.org/experiments/cookie/" target="blank">Cookie Clicker Classic</a>';
+		l('links').innerHTML='<span style="opacity:0.8;">Crumb Catalyst // not-quite-cookie</span>';
 		
 		//latency compensator stuff
 		Game.time=new Date().getTime();
@@ -1784,9 +1784,17 @@ Game.Launch=function()
 				);
 			}
 			
+			list.push(choose([
+				'News : the Crumb Catalyst cooperative opens a new neighborhood lab.',
+				'Field report : your crumb engines are now visible from low orbit.',
+				'Broadcast : market analysts call your snack economy \"suspiciously unstoppable\".',
+				'Lab note : quantum glaze resonance stabilized for 3 full minutes.',
+				'News : your factory district rebrands itself as the Crunch Corridor.'
+			]));
+
 			if (list.length==0)
 			{
-				if (Game.cookiesEarned<5) list.push('You feel like making cookies. But nobody wants to eat your cookies.');
+				if (Game.cookiesEarned<5) list.push('You prototype your first crumb reactor. Nobody believes in it yet.');
 				else if (Game.cookiesEarned<50) list.push('Your first batch goes to the trash. The neighborhood raccoon barely touches it.');
 				else if (Game.cookiesEarned<100) list.push('Your family accepts to try some of your cookies.');
 				else if (Game.cookiesEarned<500) list.push('Your cookies are popular in the neighborhood.');
@@ -1794,7 +1802,7 @@ Game.Launch=function()
 				else if (Game.cookiesEarned<3000) list.push('Your cookies are talked about for miles around.');
 				else if (Game.cookiesEarned<6000) list.push('Your cookies are renowned in the whole town!');
 				else if (Game.cookiesEarned<10000) list.push('Your cookies bring all the boys to the yard.');
-				else if (Game.cookiesEarned<20000) list.push('Your cookies now have their own website!');
+				else if (Game.cookiesEarned<20000) list.push('Your crumb project now has its own fan wiki!');
 				else if (Game.cookiesEarned<30000) list.push('Your cookies are worth a lot of money.');
 				else if (Game.cookiesEarned<40000) list.push('Your cookies sell very well in distant countries.');
 				else if (Game.cookiesEarned<60000) list.push('People come from very far away to get a taste of your cookies.');
@@ -1804,11 +1812,11 @@ Game.Launch=function()
 				else if (Game.cookiesEarned<300000) list.push('Your cookies have been named a part of the world wonders.');
 				else if (Game.cookiesEarned<450000) list.push('History books now include a whole chapter about your cookies.');
 				else if (Game.cookiesEarned<600000) list.push('Your cookies have been placed under government surveillance.');
-				else if (Game.cookiesEarned<1000000) list.push('The whole planet is enjoying your cookies!');
+				else if (Game.cookiesEarned<1000000) list.push('Your crumb network now spans the whole planet!');
 				else if (Game.cookiesEarned<5000000) list.push('Strange creatures from neighboring planets wish to try your cookies.');
 				else if (Game.cookiesEarned<10000000) list.push('Elder gods from the whole cosmos have awoken to taste your cookies.');
 				else if (Game.cookiesEarned<30000000) list.push('Beings from other dimensions lapse into existence just to get a taste of your cookies.');
-				else if (Game.cookiesEarned<100000000) list.push('Your cookies have achieved sentience.');
+				else if (Game.cookiesEarned<100000000) list.push('Your crumbs have formed a distributed snack intelligence.');
 				else if (Game.cookiesEarned<300000000) list.push('The universe has now turned into cookie dough, to the molecular level.');
 				else if (Game.cookiesEarned<1000000000) list.push('Your cookies are rewriting the fundamental laws of the universe.');
 				else if (Game.cookiesEarned<10000000000) list.push('A local news station runs a 10-minute segment about your cookies. Success!<br><span style="font-size:50%;">(you win a cookie)</span>');
@@ -3109,7 +3117,7 @@ Game.Launch=function()
 		if (Game.storeToRebuild) Game.RebuildStore();
 		if (Game.upgradesToRebuild) Game.RebuildUpgrades();
 		
-		if (Game.T%(Game.fps)==0) document.title=Beautify(Game.cookies)+' '+(Game.cookies==1?'cookie':'cookies')+' - Cookie Clicker';
+		if (Game.T%(Game.fps)==0) document.title=Beautify(Game.cookies)+' '+(Game.cookies==1?'crumb':'crumbs')+' - Crumb Catalyst';
 		
 		Game.TickerAge--;
 		if (Game.TickerAge<=0 || Game.Ticker=='') Game.getNewTicker();
@@ -3228,7 +3236,7 @@ Game.Launch=function()
 		
 		var unit=(Math.round(Game.cookiesd)==1?' cookie':' cookies');
 		if (Math.round(Game.cookiesd).toString().length>11) unit='<br>cookies';
-		l('cookies').innerHTML=Beautify(Math.round(Game.cookiesd))+unit+'<div style="font-size:50%;">per second : '+Beautify(Game.cookiesPs,1)+'</div>';//display cookie amount
+		l('cookies').innerHTML=Beautify(Math.round(Game.cookiesd))+unit+'<div style="font-size:50%;">crumb flux : '+Beautify(Game.cookiesPs,1)+'/sec</div>';//display crumb amount
 		
 		/*
 		var el=l('bigCookie');
