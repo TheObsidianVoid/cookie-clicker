@@ -1,13 +1,15 @@
-cookie-clicker
+crumb-catalyst
 ==============
 
-This is a copy of the publicly available source of the game cookie clicker by orteil.  
+Crumb Catalyst is a playful idle-game fork inspired by the classic cookie formula, but re-themed as a weird snack-tech experiment.
 
-Here is the actual game:
-http://orteil.dashnet.org/cookieclicker/
+## What's different
+- New identity and presentation (title/top bar/document title) focused on **Crumb Catalyst**.
+- Expanded flavor text and ticker messages to push a distinct "not-quite-cookie" world.
+- Same approachable JavaScript codebase for learning, tinkering, and game modding.
 
-Here is the orteil home page:
-http://orteil.dashnet.org/
+## Run it
+Open `index.html` in your browser.
 
-
-The purpose of this repository is to provide a jumping off point for javascript programming for Coder Dojo members.
+## Why this repo exists
+This project is still a coding playground for students and makers who want to explore JavaScript game loops, UI updates, and incremental game systems.
