@@ -1,13 +1,18 @@
-cookie-clicker
-==============
+not quite cookie clicker
+========================
 
-This is a copy of the publicly available source of the game cookie clicker by orteil.  
+A playful fork of Cookie Clicker that keeps the core idle game feel but adds a fresh remix layer.
 
-Here is the actual game:
-http://orteil.dashnet.org/cookieclicker/
+## What's new in this fork
 
-Here is the orteil home page:
-http://orteil.dashnet.org/
+- **Crumb economy**: clicking and passive production now generate crumbs, a side resource.
+- **Not Quite Lab panel**: a new interface in the middle column with live crumb/combo stats.
+- **Combo click gameplay**: maintain fast click streaks for scaling bonus cookie bursts.
+- **Mission system**: complete themed goals to earn larger crumb rewards.
+- **New actions**:
+  - **Burst Batch** for instant cookie spikes.
+  - **Street Bakers** for extra passive cookie generation.
 
+## Why this exists
 
-The purpose of this repository is to provide a jumping off point for javascript programming for Coder Dojo members.
+This repo started as a coding practice base, and now serves as a bigger sandbox for experimenting with idle-game systems and UI remix ideas.
